@@ -5,10 +5,6 @@ require 'redcarpet'
 require 'yaml'
 require 'bcrypt'
 
-require 'pry'
-
-# rubocop:disable StringLiterals
-
 configure do
   enable :sessions
   set :session_secret, "secret"
