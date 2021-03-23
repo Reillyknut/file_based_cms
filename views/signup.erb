@@ -1,0 +1,17 @@
+<% if session[:message] %>
+  <p class="message"><%= session.delete(:message) %></p>
+<% end %>
+
+<form class="inline" action="/users/signup" method="post">
+  <label for="username">
+    <div>Username:
+      <input type="text" name="username" id="username" value="<%= params[:username] %>"></input>
+    </div>
+  </label>
+  <label for="password">
+    <div>Password:
+      <input type="password" name="password" id="password"></input>
+    </div>
+  </label>
+  <button type="submit">Sign up</button>
+</form>
